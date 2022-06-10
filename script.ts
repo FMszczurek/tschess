@@ -1,5 +1,33 @@
+var gk : HTMLButtonElement = document.getElementById("gk")
+var gg : HTMLButtonElement = document.getElementById("gg")
+
+let tryb : number = 0;
+
+gg.addEventListener('click',function(){
+    tryb = 1
+    gk.style.visibility = 'none'
+    gg.style.visibility = 'none'
+    console.log(tryb)
+})
+
+
+gk.addEventListener('click',function(){
+    tryb = 2
+    gk.style.visibility = 'none'
+    gg.style.visibility = 'none'
+    console.log(tryb)
+})
+
+
+if(tryb == 1){
+    var board, game = new Chess();
+}else if(tryb == 2){
+
+
 var board : any,
-game = new Chess() as any;
+
+
+game = new Chess();
 
 var minimaxRoot =function(depth, game, isMaximisingPlayer) {
 
@@ -291,3 +319,4 @@ var cfg = {
     onSnapEnd: onSnapEnd
 };
 board = ChessBoard('board', cfg) as any;
+}

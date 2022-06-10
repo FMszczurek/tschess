@@ -5,15 +5,19 @@
     <link rel="stylesheet" href="chessboardjs/css/chessboard-0.3.0.css">
     <link rel="stylesheet" href="style.css">
     <script src="jquery/jquery-3.2.1.min.js"></script>
-<script src="js/chess.js"></script>
-<script src="chessboardjs/js/chessboard-0.3.0.js"></script>
+<script defer src="js/chess.js"></script>
+<script defer src="chessboardjs/js/chessboard-0.3.0.js"></script>
 </head>
 <body>
+    <div>
+        <button id="gg">gracz vs gracz</button>
+        <button id="gk">gracz vs komputer</button>
+    </div>
 <div id="board" class="board"></div>
 <div class="info">
     <label style="display:none;">
     <select id="search-depth">
-        <option value="3" selected style="visibility: none;">3</option>
+    <option value="3" selected style="visibility: none;">3</option>
 
     </select>
 	</label>
@@ -22,7 +26,7 @@
     </div>
 </div>
 
-<script src="script.js"></script>
+<script defer src="script.js"></script>
 <script>
 
 </script>

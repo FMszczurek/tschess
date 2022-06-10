@@ -1,3 +1,28 @@
+const gk = document.getElementById("gk")
+const gg = document.getElementById("gg")
+
+let tryb = 0;
+
+gg.addEventListener('click',function(){
+    tryb = 1
+    gk.style.visibility = 'none'
+    gg.style.visibility = 'none'
+    console.log(tryb)
+})
+
+
+gk.addEventListener('click',function(){
+    tryb = 2
+    gk.style.visibility = 'none'
+    gg.style.visibility = 'none'
+    console.log(tryb)
+})
+
+
+if(tryb == 1){
+    var board, game = new Chess();
+}else if(tryb == 2){
+
 var board, game = new Chess();
 var minimaxRoot = function (depth, game, isMaximisingPlayer) {
     var newGameMoves = game.ugly_moves();
@@ -245,3 +270,4 @@ var cfg = {
     onSnapEnd: onSnapEnd
 };
 board = ChessBoard('board', cfg);
+}
